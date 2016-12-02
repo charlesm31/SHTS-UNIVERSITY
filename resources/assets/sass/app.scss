@@ -1,9 +1,245 @@
 
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 // Variables
 @import "variables";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+/*==============================================
+   Normalization
+==============================================*/
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: $white;
+    color: $black;
+}
+
+h1,h2,h3,h4{
+    -webkit-font-smoothing: antialiased;
+    margin-top: 0px;
+    font-weight: 600;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+h3{
+    font-size: 19px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+h4{
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+h5{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+p{
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.btn-primary{
+    background: $blue;
+    background-color: $blue;
+    border-radius: 2px;
+}
+
+.btn-warning{
+    background: $orange;
+    background-color: $orange;
+}
+
+
+/*==============================================
+   Custom Elements Layout
+==============================================*/
+.section-header{
+    margin-bottom: 55px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.content-wrapper{
+    background: $white;
+    padding: 22px;
+}
+
+.full-width{
+    width: 100%
+}
+/*==============================================
+   Page Layout
+==============================================*/
+header{
+    background: $black;
+    padding-top: 2px;  
+    padding-bottom: 2px;
+
+    span{
+        font-size: 22px !important;
+    }
+
+    a{
+        font-size: 17px;
+        color: $white;
+    }
+
+    li{
+        padding-right: 20px;
+    }
+
+    li:last-child{
+        padding-right: 0px;
+    }
+    
+}
+
+nav.navbar{
+    margin-bottom: 0px !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .navbar-brand{
+        font-size: 35px;
+        color: $blue !important;
+    }
+
+    .navbar-nav > li > a {
+        color: black;
+        font-size: 18px;
+    }
+}
+
+section{
+    padding: 50px;
+}
+
+section#banner{
+    min-height: 60vh;
+    background: url(/img/desktop/banner.jpg) 1% 52% no-repeat;
+    background-size: cover;
+
+    form.login-form{
+        background: rgba(255, 255, 255, 0.71);
+        padding: 22px;
+
+        label{
+            font-size: 18px;
+        }
+
+        .form-control{
+            margin-bottom: 30px;
+            background: none;
+            box-shadow: none;
+            border: none;
+            border-bottom: 1px solid $light-gray;
+            border-radius: 0;
+            font-size: 18px;
+            color: $black;
+        }
+    }
+
+    #btn-login{
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+}
+
+section#courses{
+    background: $gray;
+
+    .well{
+        background: $white;
+        text-align: center;
+    }
+}
+
+section#about{
+    padding-top: 70px;
+    padding-bottom: 80px;
+
+    .padded-content{
+        padding-left: 6%;
+        padding-right: 6%;
+
+        p{
+            line-height: 1.7;
+        }
+    }
+}
+
+section#contact{
+    background: $light-brown;
+
+    .form-control{
+        border-radius: 0px;
+        height: 52px;
+        border: none;
+        box-shadow: none;
+        font-size: 18px;
+    }
+
+    .btn{
+        padding-left: 25px;
+        padding-right: 24px;
+        height: 52px;
+        border-radius: 0px;
+        border: none;
+        font-size: 18px;
+    }
+    
+    img{
+        margin-right: 15px;
+    }
+
+    img:last-child{
+        margin-right: 0px;
+    }    
+}
+
+footer{
+    padding: 50px;
+    background: $brown;
+
+    a{
+        color: $black;
+    }
+
+    hr{
+        margin-top: 50px;
+        margin-bottom: 25px;
+        border-top: 1px solid #c1baa0;
+    }
+
+    #copyright{
+        text-align: center;
+
+        p{
+            margin-bottom: 15px;
+        }
+
+        ul li{
+            list-style: none;
+            display: inline-block;
+            border-right: 1px solid #5f5b5b;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+}
+

@@ -44,7 +44,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<aside id="social-icons">
+<aside id="social-icons" class="animated slideInDown">
     <ul>
         <li><img src="{{ url('img\desktop\soc_fb.png') }}" alt="fb"></li>
         <li><img src="{{ url('img\desktop\soc_twt.png') }}" alt="twitter"></li>
@@ -53,7 +53,7 @@
     </ul>
 </aside>
 
-<aside id="more-info">
+<aside id="more-info" class="animated slideInUp">
     <ul>
         <li><img src="{{ url('img\desktop\sup-chat.png') }}" alt="live chat"></li>
         <li><img src="{{ url('img\desktop\sup-info.png') }}" alt="more info"></li>
@@ -65,7 +65,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-offset-7 col-md-4">
-                <form class="login-form">
+                <form class="login-form animated fadeIn">
                     <h1>Student Login</h1>
 
                     <div class="form-group">

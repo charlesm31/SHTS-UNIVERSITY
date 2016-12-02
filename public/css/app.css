@@ -1,12 +1,14 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css);
+@import url(https://cdn.bootcss.com/hover.css/2.1.0/css/hover-min.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7734,6 +7736,10 @@ p {
   margin-bottom: 25px;
 }
 
+img {
+  cursor: pointer;
+}
+
 .btn-primary {
   background: #0087DC;
   background-color: #0087DC;
@@ -7917,6 +7923,7 @@ footer {
 
 footer a {
   color: #262626;
+  display: block;
 }
 
 footer hr {

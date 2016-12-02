@@ -1,15 +1,19 @@
 
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-// Icons
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
-
 // Variables
 @import "variables";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+//Animation
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css);
+@import url(https://cdn.bootcss.com/hover.css/2.1.0/css/hover-min.css);
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+// Icons
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
 
 /*==============================================
@@ -55,6 +59,10 @@ p{
     font-weight: normal;
     line-height: 1.4;
     margin-bottom: 25px;
+}
+
+img{
+    cursor: pointer;
 }
 
 .btn-primary{
@@ -239,6 +247,7 @@ footer{
 
     a{
         color: $black;
+        display: block;
     }
 
     hr{

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -7695,6 +7696,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   background: #FFFFFF;
   color: #262626;
+  position: relative;
 }
 
 h1, h2, h3, h4 {
@@ -7801,6 +7803,24 @@ nav.navbar .navbar-brand {
 nav.navbar .navbar-nav > li > a {
   color: black;
   font-size: 18px;
+}
+
+aside {
+  position: fixed;
+  top: 30%;
+}
+
+aside ul, aside li {
+  list-style: none;
+  padding: 0px;
+}
+
+aside#social-icons {
+  left: 0;
+}
+
+aside#more-info {
+  right: 0;
 }
 
 section {

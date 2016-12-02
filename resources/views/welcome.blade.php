@@ -44,6 +44,23 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<aside id="social-icons">
+    <ul>
+        <li><img src="{{ url('img\desktop\soc_fb.png') }}" alt="fb"></li>
+        <li><img src="{{ url('img\desktop\soc_twt.png') }}" alt="twitter"></li>
+        <li><img src="{{ url('img\desktop\soc_gplus.png') }}" alt="google plus"></li>
+        <li><img src="{{ url('img\desktop\soc_pin.png') }}" alt="pinterest"></li>
+    </ul>
+</aside>
+
+<aside id="more-info">
+    <ul>
+        <li><img src="{{ url('img\desktop\sup-chat.png') }}" alt="live chat"></li>
+        <li><img src="{{ url('img\desktop\sup-info.png') }}" alt="more info"></li>
+        <li><img src="{{ url('img\desktop\sup-fund.png') }}" alt="funding enquiry"></li>
+    </ul>
+</aside>
+
 <section id="banner">
     <div class="container">
         <div class="row">
@@ -126,10 +143,10 @@
             <div class="col-md-5">
                 <h4>Stay Connected</h4>
                 <img src="{{ url('img\desktop\ftr-soc-fb.png') }}" alt="fb">
-                <img src="{{ url('img\desktop\ftr-soc-twt.png') }}" alt="fb">
-                <img src="{{ url('img\desktop\ftr-soc-in.png') }}" alt="fb">
-                <img src="{{ url('img\desktop\ftr-soc-gplus.png') }}" alt="fb">
-                <img src="{{ url('img\desktop\ftr-soc-pin.png') }}" alt="fb">
+                <img src="{{ url('img\desktop\ftr-soc-twt.png') }}" alt="twitter">
+                <img src="{{ url('img\desktop\ftr-soc-in.png') }}" alt="linked in">
+                <img src="{{ url('img\desktop\ftr-soc-gplus.png') }}" alt="google plus">
+                <img src="{{ url('img\desktop\ftr-soc-pin.png') }}" alt="pinterest">
             </div>
             <div class="col-md-7">
                 <h4>Sign up to our newsletter</h4>

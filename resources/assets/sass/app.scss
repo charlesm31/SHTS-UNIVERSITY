@@ -2,6 +2,9 @@
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+// Icons
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
 // Variables
 @import "variables";
 
@@ -16,6 +19,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     background: $white;
     color: $black;
+    position: relative;
 }
 
 h1,h2,h3,h4{
@@ -123,6 +127,23 @@ nav.navbar{
         color: black;
         font-size: 18px;
     }
+}
+
+aside{
+    position: fixed;
+    top: 30%;
+
+    ul, li{
+        list-style: none;
+        padding: 0px;
+    }
+}
+aside#social-icons{      
+    left: 0;       
+}
+
+aside#more-info{ 
+    right: 0;  
 }
 
 section{

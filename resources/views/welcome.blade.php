@@ -8,7 +8,7 @@
 <header>
   <div class="container">   
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
+    <div class="collapse navbar-collapse menu" id="menu">      
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="fa fa-phone"></span> 1234 567 890</a></li>
         <li><a href="#"><span class="fa fa-envelope"></span> Contact Us</a></li>
@@ -23,7 +23,7 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".menu" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -33,7 +33,7 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
+    <div class="collapse navbar-collapse menu" id="menu">      
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Lorem</a></li>
         <li><a href="#">Dolor</a></li>
@@ -44,7 +44,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<aside id="social-icons" class="animated slideInDown">
+<aside id="social-icons" class="animated slideInDown hidden-sm hidden-xs">
     <ul>
         <li><img src="{{ url('img\desktop\soc_fb.png') }}" alt="fb"></li>
         <li><img src="{{ url('img\desktop\soc_twt.png') }}" alt="twitter"></li>
@@ -53,7 +53,7 @@
     </ul>
 </aside>
 
-<aside id="more-info" class="animated slideInUp">
+<aside id="more-info" class="animated slideInUp hidden-sm hidden-xs">
     <ul>
         <li><img src="{{ url('img\desktop\sup-chat.png') }}" alt="live chat"></li>
         <li><img src="{{ url('img\desktop\sup-info.png') }}" alt="more info"></li>
@@ -69,12 +69,12 @@
                     <h1>Student Login</h1>
 
                     <div class="form-group">
-                        <label for="username">Username</label>
+                        <label for="username">Username: </label>
                         <input type="text" class="form-control" name="username" id="username" placeholder="e.g.. john">
                     </div>
 
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <label for="password">Password: </label>
                         <input type="password" class="form-control" name="password"  id="password" placeholder="e.g.. ***********">
                     </div>
 
@@ -148,6 +148,9 @@
                 <img src="{{ url('img\desktop\ftr-soc-gplus.png') }}" alt="google plus">
                 <img src="{{ url('img\desktop\ftr-soc-pin.png') }}" alt="pinterest">
             </div>
+
+            <hr class="visible-xs visible-sm">
+
             <div class="col-md-7">
                 <h4>Sign up to our newsletter</h4>
                 <form class="form-inline">
@@ -166,7 +169,66 @@
 
 <footer>
     <div class="container">
-        <div class="row">
+    <div class="panel-group visible-xs visible-sm" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Lorem
+                </a>
+            </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <a href="#">Mauris vel imperdiet</a>
+                <a href="#">Faucibus metus</a>
+                <a href="#">Nulla sed quam dictum</a>
+                <a href="#">Ultricies sit amet</a>
+                <a href="#">Sed tempus</a>
+                <a href="#">Neque non tincidunt</a>
+                <a href="#">Vivamus elementum</a>
+                <a href="#">Mit ut semper</a>
+            </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Ipsum
+                </a>
+            </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+                <a href="#">Mauris vel imperdiet</a>
+                <a href="#">Faucibus metus</a>
+                <a href="#">Nulla sed quam dictum</a>
+                <a href="#">Ultricies sit amet</a>
+                <a href="#">Sed tempus</a>
+                <a href="#">Neque non tincidunt</a>
+                <a href="#">Vivamus elementum</a>
+                <a href="#">Mit ut semper</a>
+            </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Collapsible Group Item #3
+                </a>
+            </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="row hidden-xs hidden-sm">
             <div class="col-md-2 col-md-offset-1">
                 <h5>Lorem</h5>
                 <a href="#">Mauris vel imperdiet</a>
@@ -233,7 +295,7 @@
         <hr>
         <div id="copyright">
             <p>©Copyright 2015 SHTS University, All rights reserved</p>
-            <ul>
+            <ul class="hidden-xs hidden-sm">
                 <li>Lorem</li>
                 <li>Ipsum</li>
                 <li>Dolor</li>

@@ -65,6 +65,12 @@ img{
     cursor: pointer;
 }
 
+hr{
+    margin-top: 50px;
+    margin-bottom: 25px;
+    border-top: 1px solid #c1baa0;
+}
+
 .btn-primary{
     background: $blue;
     background-color: $blue;
@@ -89,11 +95,13 @@ img{
 .content-wrapper{
     background: $white;
     padding: 22px;
+    margin-bottom: 20px;
 }
 
 .full-width{
     width: 100%
 }
+
 /*==============================================
    Page Layout
 ==============================================*/
@@ -164,7 +172,7 @@ section#banner{
     background-size: cover;
 
     form.login-form{
-        background: rgba(255, 255, 255, 0.71);
+        background: rgba(255, 255, 255, 0.86);
         padding: 22px;
 
         label{
@@ -248,13 +256,7 @@ footer{
     a{
         color: $black;
         display: block;
-    }
-
-    hr{
-        margin-top: 50px;
-        margin-bottom: 25px;
-        border-top: 1px solid #c1baa0;
-    }
+    }   
 
     #copyright{
         text-align: center;
@@ -272,4 +274,9 @@ footer{
         }
     }
 }
+
+/*==============================================
+   Media Queries
+==============================================*/
+@import 'media-queries';
 

@@ -7740,6 +7740,12 @@ img {
   cursor: pointer;
 }
 
+hr {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  border-top: 1px solid #c1baa0;
+}
+
 .btn-primary {
   background: #0087DC;
   background-color: #0087DC;
@@ -7763,6 +7769,7 @@ img {
 .content-wrapper {
   background: #FFFFFF;
   padding: 22px;
+  margin-bottom: 20px;
 }
 
 .full-width {
@@ -7840,7 +7847,7 @@ section#banner {
 }
 
 section#banner form.login-form {
-  background: rgba(255, 255, 255, 0.71);
+  background: rgba(255, 255, 255, 0.86);
   padding: 22px;
 }
 
@@ -7926,12 +7933,6 @@ footer a {
   display: block;
 }
 
-footer hr {
-  margin-top: 50px;
-  margin-bottom: 25px;
-  border-top: 1px solid #c1baa0;
-}
-
 footer #copyright {
   text-align: center;
 }
@@ -7946,6 +7947,108 @@ footer #copyright ul li {
   border-right: 1px solid #5f5b5b;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+/*==============================================
+   Media Queries
+==============================================*/
+/*==========  Non-Mobile First Method  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  h3 {
+    margin-bottom: 10px;
+  }
+  h4 {
+    text-align: center;
+  }
+  p {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+  .section-header {
+    margin-bottom: 30px;
+    font-size: 25px;
+  }
+  nav.navbar {
+    margin-top: -4px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  nav.navbar .navbar-brand {
+    font-size: 23px;
+    color: #0087DC !important;
+  }
+  section {
+    padding: 30px 0px 20px 0px;
+  }
+  section#banner {
+    height: 65vh;
+    background: url(/img/mobile/banner.jpg) 54% 0% no-repeat;
+    background-size: cover;
+  }
+  section#banner h1 {
+    font-weight: 600;
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+  section#banner form.login-form {
+    padding: 0px;
+    padding-top: 15px;
+    position: relative;
+    top: 130px;
+  }
+  section#banner form.login-form .form-group {
+    padding: 0 20px;
+    margin-bottom: 5px;
+  }
+  section#banner form.login-form label, section#banner form.login-form .form-control {
+    font-size: 15px;
+    display: inline-block;
+  }
+  section#banner form.login-form .form-control {
+    width: 165px;
+    margin-bottom: 5px;
+  }
+  section#banner form.login-form #btn-login {
+    font-size: 17px;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  section#courses .btn-primary {
+    width: 100%;
+    border-radius: 0px;
+  }
+  section#courses .content-wrapper {
+    background: #FFFFFF;
+    padding: 20px 0px 0px 0px;
+    margin-bottom: 20px;
+  }
+  section#courses .content-wrapper p {
+    padding: 13px;
+    padding: 13px;
+  }
+  section#about {
+    padding-top: 40px;
+    padding-bottom: 25px;
+  }
+  section#contact {
+    padding-bottom: 30px;
+  }
+  section#contact hr {
+    margin-top: 28px;
+    border-top: 2px solid #cac6bb;
+  }
+  section#contact .btn {
+    width: 100%;
+  }
+  footer {
+    padding: 0px;
+    padding-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

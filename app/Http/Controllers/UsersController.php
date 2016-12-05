@@ -18,13 +18,24 @@ class UsersController extends Controller
         return view('user.form');
     }
 
-    public function postUser()
+    public function postUser($id)
     {
-        return view('user.add');
+        return view('user.update');
     }
 
-    public function destroyUser()
+    public function destroyUser(Request $request)
     {
-        return view('user.delete');
+        $id = $request['user_id'];
+        
+        //add here if user is authenticated and admin
+
+        $user = USER::find($id);
+
+
+        if($id != '1' || $id !='2'){
+            $user->delete();
+        }
+
+        return redirect('/users');
     }
 }

@@ -31,11 +31,22 @@ User Lists
         <td>{{ $user->created_at }}</td>
         <td><span class="label label-success">Active</span></td>
         <td>
-          <button class="btn btn-xs btn-primary" id="user_update" data-id="{{ $user->id }}"><i class="fa fa-pencil"></i> </button>
-          <button class="btn btn-xs btn-danger"  id="user_delete" data-id="{{ $user->id }}"><i class="fa fa-trash-o"></i> </button>
+          <a href="{{ url('/user/update') }}" class="btn btn-xs btn-primary" id="{{ $user->id }}"><i class="fa fa-pencil"></i> </a>
+          <button class="btn btn-xs btn-danger delete_user"  data-id="{{ $user->id }}" data-toggle="modal"  data-target="#confirm-delete"><i class="fa fa-trash-o"></i> </button>
         </td>
       </tr>
       @endforeach
     </tbody>
   </table>
+
+  @include('modals.delete')
+@endsection
+
+@section('script')
+<script>
+  $(document).on("click", ".delete_user", function () {
+      var user_id = $(this).data('id');
+      $("#confirm-delete #user_id").val( user_id );
+  });
+</script>
 @endsection

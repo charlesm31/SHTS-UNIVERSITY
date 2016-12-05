@@ -25,7 +25,7 @@ Route::get('/login', function () {
      Route::get('/users', 'UsersController@getUsers');
      Route::get('/user/new', 'UsersController@storeUser');
      Route::post('/user/update', 'UsersController@postUser');
-     Route::get('/user/delete', 'UsersController@destroyUser');
+     Route::post('/user/delete', 'UsersController@destroyUser');
 
      Route::match(['get', 'post'], '/fibonacci', 'BackendController@Fibonacci');
      Route::match(['get', 'post'], '/palindrome','BackendController@Palindrome');

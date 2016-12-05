@@ -13,14 +13,41 @@ class UsersController extends Controller
         return view('user.lists', compact('users'));
     }
 
-    public function storeUser()
+    public function storeUser(Request $request)
     {
+
+        if ($request->isMethod('post')) {
+            $user = new User;
+            $user->type = $request['type'];
+            $user->username = $request['username'];
+            $user->password = bcrypt($request['password']);
+            $user->save();
+
+            return redirect('/users');
+        }        
+
         return view('user.form');
     }
 
-    public function postUser($id)
+    public function postUser(Request $request, $id)
     {
-        return view('user.update');
+        $user = User::find($id);
+
+        return view('user.form', compact('user'));
+
+        if ($request->isMethod('post')) {
+            dd($user);
+            $user->type = $request['type'];
+            $user->username = $request['username'];
+            dd($request['password']);
+            if(!empty($request['password'])){
+                $user->password = bcrypt($request['password']);
+            }
+
+            $user->update();
+
+            return redirect('/users');
+        }      
     }
 
     public function destroyUser(Request $request)
@@ -29,8 +56,7 @@ class UsersController extends Controller
         
         //add here if user is authenticated and admin
 
-        $user = USER::find($id);
-
+        $user = User::find($id);
 
         if($id != '1' || $id !='2'){
             $user->delete();

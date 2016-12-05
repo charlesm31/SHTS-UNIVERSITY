@@ -18,8 +18,9 @@ User Lists
     <thead>
       <tr>
         <th>User</th>
-        <th>Created</th>
+        <th>Type</th>
         <th>Status</th>
+        <th>Created</th>
         <th><a href="{{ url('/user/new') }}"><i class="fa fa-plus"></i> New</a></th>
       </tr>
     </thead>
@@ -28,10 +29,11 @@ User Lists
       @foreach($users as $user)
       <tr>
         <td>{{ $user->username }}</td>
-        <td>{{ $user->created_at }}</td>
+        <td>{{ $user->type }}</td>
         <td><span class="label label-success">Active</span></td>
+        <td>{{ $user->created_at }}</td>
         <td>
-          <a href="{{ url('/user/update') }}" class="btn btn-xs btn-primary" id="{{ $user->id }}"><i class="fa fa-pencil"></i> </a>
+          <a href="{{ url('/user/update')}}/{{ $user->id }}" class="btn btn-xs btn-primary" id="{{ $user->id }}"><i class="fa fa-pencil"></i> </a>
           <button class="btn btn-xs btn-danger delete_user"  data-id="{{ $user->id }}" data-toggle="modal"  data-target="#confirm-delete"><i class="fa fa-trash-o"></i> </button>
         </td>
       </tr>

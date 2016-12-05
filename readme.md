@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img width="150"src="https://laravel.com/laravel.png"></a></p>
+<p align="center"><a href="https://laravel.com" target="__blank"><img width="150"src="https://laravel.com/laravel.png"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -13,18 +13,18 @@ SHTS is made using LARAVEL 5 PHP Framework. It is one of the most popular framew
 See detailed description on the bottom portion of the docs.
 
 ## Run SHTS University on your local machine
-- clone project: _git clone https://github.com/charlesm31/SHTS-UNIVERSITY.git_
-- copy .env.example as _.env_
+- clone project: __git clone https://github.com/charlesm31/SHTS-UNIVERSITY.git__
+- copy .env.example as __.env__
 - open .env file
 - update mysql credentials to your local mysql credentials (database name, username, password)
 - create the database shts, otherwise what you specified on your .env file
 - Open project path on the terminal
-- install dependencies: _composer install_
-- Generate app key (Optional: only if APP_KEY is not defiend on .env file): _php artisan key:generate_
-- Create database tables: _php artisan migrate_
-- Populate database data: _php artisan db:seed_
-- Serve the project: _php artisan serve_
-- Open the app on the _browser: _localhost:8000_
+- install dependencies: __composer install__
+- Generate app key (Optional: only if APP__KEY is not defiend on .env file): __php artisan key:generate__
+- Create database tables: __php artisan migrate____
+- Populate database data: __php artisan db:seed__
+- Serve the project: __php artisan serve__
+- Open the app on the __browser: __localhost:8000__
 
 ## Default Users
 - admin account: admin / password123!

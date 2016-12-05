@@ -27,8 +27,8 @@ See detailed description on the bottom portion of the docs.
 - Open the app on the __browser: localhost:8000__
 
 ## Default Users
-- admin account: admin / password123!
-- user account: user / user123!
+- admin account: __admin / password123!__
+- user account: __user / user123!__
 
 ## Working Features
 - Landing Page responsive layout for destkop, ipad, and mobile view using bootstrap, CSS and media queries

@@ -15,10 +15,10 @@ See detailed description on the bottom portion of the docs.
 ## Run SHTS University on your local machine
 - clone project: __git clone https://github.com/charlesm31/SHTS-UNIVERSITY.git__
 - copy .env.example as __.env__
-- open .env file
-- update mysql credentials to your local mysql credentials (database name, username, password)
-- create the database shts, otherwise what you specified on your .env file
-- Open project path on the terminal
+- open __.env file__
+- update mysql credentials to your local mysql credentials: __database name, username, password__
+- __create database shts__, otherwise what you specified on your .env file
+- Open project path on the __terminal__
 - install dependencies: __composer install__
 - Generate app key (Optional: only if APP__KEY is not defiend on .env file): __php artisan key:generate__
 - Create database tables: __php artisan migrate____

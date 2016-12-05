@@ -14,3 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', function () {
+    return view('welcome');
+});
+
+// private routes
+// Route::group(['middleware' => ['auth']], function () {
+
+     Route::get('/users', 'UsersController@getUsers');
+     Route::get('/user/new', 'UsersController@storeUser');
+     Route::post('/user/update', 'UsersController@postUser');
+     Route::get('/user/delete', 'UsersController@destroyUser');
+
+     Route::match(['get', 'post'], '/fibonacci', 'BackendController@Fibonacci');
+     Route::match(['get', 'post'], '/palindrome','BackendController@Palindrome');
+     Route::match(['get', 'post'], '/anagram','BackendController@Anagram');
+     Route::match(['get', 'post'], '/number-sort','BackendController@NumberSort');    
+// });

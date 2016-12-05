@@ -7819,6 +7819,7 @@ nav.navbar .navbar-nav > li > a {
 }
 
 aside {
+  z-index: 100;
   position: fixed;
   top: 30%;
 }
@@ -7954,11 +7955,30 @@ footer #copyright ul li {
 ==============================================*/
 /*==========  Non-Mobile First Method  ==========*/
 /* Large Devices, Wide Screens */
-/* Medium Devices, Desktops */
+@media only screen and (max-width: 1200px) {
+  section {
+    padding: 25px;
+  }
+}
+
 /* Small Devices, Tablets */
-/* Extra Small Devices, Phones */
+@media only screen and (max-width: 768px) and (max-width: 992px) {
+  section {
+    padding: 50px 10px;
+  }
+  section#banner form.login-form {
+    background: rgba(255, 255, 255, 0.86);
+    padding: 22px 22px;
+    margin-top: 80px;
+  }
+  footer {
+    padding: 50px 0px;
+    background: #D9D2BA;
+  }
+}
+
 /* Custom, iPhone Retina */
-@media only screen and (max-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
   h3 {
     margin-bottom: 10px;
   }
@@ -7999,7 +8019,7 @@ footer #copyright ul li {
     padding: 0px;
     padding-top: 15px;
     position: relative;
-    top: 130px;
+    top: 58px;
   }
   section#banner form.login-form .form-group {
     padding: 0 20px;
@@ -8047,7 +8067,52 @@ footer #copyright ul li {
   }
   footer {
     padding: 0px;
-    padding-top: 20px;
+  }
+  footer .container {
+    padding: 0px;
+  }
+  footer .panel {
+    background: none;
+  }
+  footer .panel .panel-title {
+    text-align: left;
+    font-weight: normal;
+    padding: 10px 5px;
+  }
+  footer .panel .panel-body {
+    padding: 0px 11px;
+    background: #F1F1F1;
+  }
+  footer .panel .panel-body .listgroup {
+    margin-bottom: 15px;
+  }
+  footer .panel .panel-body .list-group-item {
+    position: relative;
+    display: block;
+    padding: 0px 13px 10px;
+    margin-bottom: 0;
+    background-color: #fff;
+    border: none;
+  }
+  footer .panel .panel-body .list-group-item a {
+    border-bottom: 1.8px solid #e2e2e2;
+    padding-bottom: 10px;
+  }
+  footer .panel .panel-body .list-group-item:first-child {
+    border-radius: 0px !important;
+    padding-top: 12px !important;
+  }
+  footer .panel .panel-body .list-group-item:last-child {
+    border-radius: 0px !important;
+  }
+  footer hr {
+    display: none;
+  }
+  footer #copyright {
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 10px;
   }
 }
 

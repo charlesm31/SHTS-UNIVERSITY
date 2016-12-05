@@ -169,8 +169,8 @@
 
 <footer>
     <div class="container">
-        <div class="row hidden-xs hidden-sm">
-            <div class="col-md-2 col-md-offset-1">
+        <div class="row hidden-xs">
+            <div class="col-md-2 col-md-offset-1 col-sm-3">
                 <h5>Lorem</h5>
                 <a href="#">Mauris vel imperdiet</a>
                 <a href="#">Faucibus metus</a>
@@ -182,7 +182,7 @@
                 <a href="#">Mit ut semper</a>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-3">
                 <h5>Ipsum</h5>
                 <a href="#">Mauris vel imperdiet</a>
                 <a href="#">Faucibus metus</a>
@@ -193,7 +193,7 @@
                 <a href="#">Vivamus elementum</a>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-3">
                 <h5>Dolor</h5>
                 <a href="#">Mauris vel imperdiet</a>
                 <a href="#">Faucibus metus</a>
@@ -207,7 +207,7 @@
                 <a href="#">Sapien mollis</a>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-3">
                 <h5>Sit amet</h5>
                 <a href="#">Mauris vel imperdiet</a>
                 <a href="#">Faucibus metus</a>
@@ -216,11 +216,11 @@
                 <a href="#">Sed tempus</a>
                 <a href="#">Neque non tincidunt</a>
                 <a href="#">Vivamus elementum</a>
-                <a href="#">Portitur vitae nulla dolor</a>
                 <a href="#">Mit ut semper</a>
+                <a href="#">Portitur vitae nulla dolor</a>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-3">
                 <h5>Consectetur</h5>
                 <a href="#">Mauris vel imperdiet</a>
                 <a href="#">Faucibus metus</a>
@@ -233,8 +233,8 @@
             </div>
         </div>
 
-        <div class="panel-group visible-xs visible-sm" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
+        <div class="panel-group visible-xs" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel">
                 <div class="panel-heading" role="tab" id="headingOne">
                     <h4 class="panel-title">
                         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -258,7 +258,7 @@
                 </div>
             </div>
             
-            <div class="panel panel-default">
+            <div class="panel">
                 <div class="panel-heading" role="tab" id="headingTwo">
                     <h4 class="panel-title">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -281,7 +281,7 @@
                 </div>
             </div>
 
-            <div class="panel panel-default">
+            <div class="panel">
                 <div class="panel-heading" role="tab" id="headingThree">
                     <h4 class="panel-title">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -299,12 +299,64 @@
                             <li class="list-group-item"><a href="#">Sed tempus</a></li>
                             <li class="list-group-item"><a href="#">Neque non tincidunt</a></li>
                             <li class="list-group-item"><a href="#">Vivamus elementum</a></li>
+                            <li class="list-group-item"><a href="#">Mit ut semper</a></li>
+                            <li class="list-group-item"><a href="#">Portitur vitae nulla dolor</a></li>
+                            <li class="list-group-item"><a href="#">Sapien mollis</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Sit Amet
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Mauris vel imperdiet</a></li>
+                            <li class="list-group-item"><a href="#">Faucibus metus</a></li>
+                            <li class="list-group-item"><a href="#">Nulla sed quam dictum</a></li>
+                            <li class="list-group-item"><a href="#">Ultricies sit amet</a></li>
+                            <li class="list-group-item"><a href="#">Sed tempus</a></li>
+                            <li class="list-group-item"><a href="#">Neque non tincidunt</a></li>
+                            <li class="list-group-item"><a href="#">Vivamus elementum</a></li>
+                            <li class="list-group-item"><a href="#">Mit ut semper</a></li>
+                            <li class="list-group-item"><a href="#">Portitur vitae nulla dolor</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Consectetur
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Mauris vel imperdiet</a></li>
+                            <li class="list-group-item"><a href="#">Faucibus metus</a></li>
+                            <li class="list-group-item"><a href="#">Nulla sed quam dictum</a></li>
+                            <li class="list-group-item"><a href="#">Ultricies sit amet</a></li>
+                            <li class="list-group-item"><a href="#">Sed tempus</a></li>
+                            <li class="list-group-item"><a href="#">Neque non tincidunt</a></li>
+                            <li class="list-group-item"><a href="#">Vivamus elementum</a></li>
+                            <li class="list-group-item"><a href="#">Mit ut semper</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>        
-
+       
         <hr>
         <div id="copyright">
             <p>©Copyright 2015 SHTS University, All rights reserved</p>

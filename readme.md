@@ -21,10 +21,10 @@ See detailed description on the bottom portion of the docs.
 - Open project path on the __terminal__
 - install dependencies: __composer install__
 - Generate app key (Optional: only if APP__KEY is not defiend on .env file): __php artisan key:generate__
-- Create database tables: __php artisan migrate____
+- Create database tables: __php artisan migrate__
 - Populate database data: __php artisan db:seed__
 - Serve the project: __php artisan serve__
-- Open the app on the __browser: __localhost:8000__
+- Open the app on the __browser: localhost:8000__
 
 ## Default Users
 - admin account: admin / password123!

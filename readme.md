@@ -32,8 +32,7 @@ See detailed description on the bottom portion of the docs.
 
 ## Working Features
 - Landing Page responsive layout for destkop, ipad, and mobile view using bootstrap, CSS and media queries
-- Login Feature: Admin and user view
-- Sign in Form Validation
+- Login Feature and Form Validation
 - Content restriction base on user type
 - Admin CRUD for user management
 - Fibonacci Series

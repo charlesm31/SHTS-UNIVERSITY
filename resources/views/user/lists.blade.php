@@ -22,7 +22,7 @@ User Lists
         <th>Status</th>
         <th>Created</th>
         @if(Auth::user()->type === 'admin')
-        <th><a href="{{ url('/user/new') }}"><i class="fa fa-plus"></i> New</a></th>
+        <th><a href="{{ url('/user/add') }}"><i class="fa fa-plus"></i> New</a></th>
         @endif
       </tr>
     </thead>

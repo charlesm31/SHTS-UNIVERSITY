@@ -9,6 +9,10 @@ use Auth;
 class UsersController extends Controller
 {
 
+    /**
+    * Authenticate user using Auth Facade
+    *
+    **/
     public function login(Request $request)
     {
         if ($request->isMethod('post')) {
@@ -21,32 +25,53 @@ class UsersController extends Controller
             else { 
                 $msg = 'Invalid credentials';
                 $class= 'alert-danger';
-                return view('welcome', compact('msg', 'class'));
+                return view('welcome', compact('msg', 'class', 'username'));
             }
         }    
 
-        return redirect('/');
+        return view('welcome');
     }
 
+
+    /**
+    * Logout and destroy session data
+    *
+    **/
     public function logout(Request $request) {
           Auth::logout();
           return redirect('/');
     }
 
+
+    /**
+    * Get User Lists
+    **/
     public function getUsers()
     {
         $users = User::get()->all();
         return view('user.lists', compact('users'));
     }
 
+
+    /**
+    * Create or Update User
+    **/
     public function storeUser(Request $request)
     {
         if(Auth::user()->type === 'admin'){
             if ($request->isMethod('post')) {
+
+                $this->validate($request, [
+                    'username' => 'required|unique:users|max:255',
+                    'password' => 'required|min:8',
+                    'type' => 'required',
+                ]);
+                
                 $user = new User;
                 $user->type = $request['type'];
                 $user->username = $request['username'];
                 $user->password = bcrypt($request['password']);
+                $user->remember_token = '';
                 $user->save();
 
                 return redirect('/users');
@@ -58,39 +83,53 @@ class UsersController extends Controller
         return redirect('/users');
     }
 
+
+    /**
+    * Get single User and Update
+    *
+    **/
     public function postUser(Request $request, $id)
     {
-        $user = User::find($id);
-
-        return view('user.form', compact('user'));
-
-        if ($request->isMethod('post')) {
-            dd($user);
-            $user->type = $request['type'];
-            $user->username = $request['username'];
-            dd($request['password']);
-            if(!empty($request['password'])){
-                $user->password = bcrypt($request['password']);
-            }
-
-            $user->update();
-
-            return redirect('/users');
-        }      
-    }
-
-    public function destroyUser(Request $request)
-    {
-        $id = $request['user_id'];
-        
-        //add here if user is authenticated and admin
 
         $user = User::find($id);
 
-        if($id != '1' || $id !='2'){
-            $user->delete();
+        if(Auth::user()->type === 'admin'){            
+            
+            if ($request->isMethod('post')) {
+
+                $user->type = $request['type'];
+                $user->username = $request['username'];
+                if(!empty($request['password'])){
+                    $user->password = bcrypt($request['password']);
+                }
+                $user->update();
+                return redirect('/users');
+            }       
+
+                       
+            return view('user.form', compact('user'));         
         }
 
-        return redirect('/users');
+        return redirect('/users');       
+    }
+
+    
+    /**
+    * Delete Existing User
+    *
+    **/
+    public function destroyUser(Request $request)
+    {
+        if(Auth::user()->type === 'admin'){
+            
+            $id = $request['user_id'];    
+            $user = User::find($id);
+
+            if($id != '1' || $id !='2'){
+                $user->delete();
+            }
+        }
+
+        return redirect('/users');     
     }
 }

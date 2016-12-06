@@ -70,7 +70,7 @@
 
                     <div class="form-group">
                         <label for="username">Username: </label>
-                        <input type="text" class="form-control" name="username" id="username" placeholder="e.g.. john" required>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="e.g.. john" value="{{ (!empty($username) ? $username : '') }}" required>
                     </div>
 
                     <div class="form-group">

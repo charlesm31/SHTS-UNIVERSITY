@@ -29,7 +29,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">SHTS University</a>
+      <a class="navbar-brand" href="{{ url('/') }}">SHTS University</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -65,19 +65,24 @@
     <div class="container">
         <div class="row">
             <div class="col-md-offset-7 col-md-4">
-                <form class="login-form animated fadeIn" method="post" action="">
+                <form class="login-form animated fadeIn" method="post" action="{{ url('/login') }}">
                     <h1>Student Login</h1>
 
                     <div class="form-group">
                         <label for="username">Username: </label>
-                        <input type="text" class="form-control" name="username" id="username" placeholder="e.g.. john">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="e.g.. john" required>
                     </div>
 
                     <div class="form-group">
                         <label for="password">Password: </label>
-                        <input type="password" class="form-control" name="password"  id="password" placeholder="e.g.. ***********">
+                        <input type="password" class="form-control" name="password"  id="password" placeholder="e.g.. ***********" required>
                     </div>
 
+                    {{ csrf_field() }}
+
+                    @if(!empty($msg))
+                        <div class="alert {{ $class }}">{{ $msg }}</div>
+                    @endif
                     <button type="submit" class="btn btn-lg btn-primary full-width" id="btn-login"> Sign In <i class="fa fa-arrow-circle-o-right"></i></button>
                 </form>
             </div>
@@ -381,4 +386,3 @@
     });
 </script>
 @endsection
-

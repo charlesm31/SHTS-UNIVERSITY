@@ -82,6 +82,14 @@ hr{
     background-color: $orange;
 }
 
+ .alert-danger {
+    background-color: #dc334d;
+    border-color: #dc334d;
+    text-align: center;
+    color: #ffffff;
+    padding: 5px;
+}
+
 
 /*==============================================
    Custom Elements Layout
@@ -189,7 +197,7 @@ section#banner{
             border-radius: 0;
             font-size: 18px;
             color: $black;
-        }
+        }      
     }
 
     #btn-login{

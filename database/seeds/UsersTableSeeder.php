@@ -16,6 +16,7 @@ class UsersTableSeeder extends Seeder
             'type' => 'admin',
             'username' => 'admin',
             'password' => bcrypt('admin123!'),
+            'remember_token' => '',
             'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => \Carbon\Carbon::now()->toDateTimeString(),
         ]);
@@ -25,6 +26,7 @@ class UsersTableSeeder extends Seeder
             'type' => 'user',
             'username' => 'user',
             'password' => bcrypt('user123!'),
+            'remember_token' => '',
             'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => \Carbon\Carbon::now()->toDateTimeString(),
         ]);

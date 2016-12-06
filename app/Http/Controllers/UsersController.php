@@ -4,9 +4,35 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
 
 class UsersController extends Controller
 {
+
+    public function login(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $username = $request['username'];
+            $password = $request['password'];
+
+            if (Auth::attempt(array('username' => $username, 'password' => $password))){
+                return redirect('/users');
+            }
+            else { 
+                $msg = 'Invalid credentials';
+                $class= 'alert-danger';
+                return view('welcome', compact('msg', 'class'));
+            }
+        }    
+
+        return redirect('/');
+    }
+
+    public function logout(Request $request) {
+          Auth::logout();
+          return redirect('/');
+    }
+
     public function getUsers()
     {
         $users = User::get()->all();

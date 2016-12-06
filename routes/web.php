@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('welcome');
-});
+Route::post('/login', 'UsersController@login');
+Route::get('/logout', 'UsersController@logout');
+
 
 // private routes
 Route::group(['middleware' => ['auth']], function () {

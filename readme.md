@@ -27,7 +27,7 @@ See detailed description on the bottom portion of the docs.
 - Open the app on the __browser: localhost:8000__
 
 ## Default Users
-- admin account: __admin / password123!__
+- admin account: __admin / admin123!__
 - user account: __user / user123!__
 
 ## Working Features

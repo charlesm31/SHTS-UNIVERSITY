@@ -7757,6 +7757,14 @@ hr {
   background-color: #FFA200;
 }
 
+.alert-danger {
+  background-color: #dc334d;
+  border-color: #dc334d;
+  text-align: center;
+  color: #ffffff;
+  padding: 5px;
+}
+
 /*==============================================
    Custom Elements Layout
 ==============================================*/

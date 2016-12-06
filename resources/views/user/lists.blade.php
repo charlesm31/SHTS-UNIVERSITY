@@ -51,10 +51,10 @@ User Lists
 @section('script')
 <script>
   $(document).on("click", ".delete_user", function () {
-      $("#tbl_users").DataTables();
 
       var user_id = $(this).data('id');
       $("#confirm-delete #user_id").val( user_id );
+
   });
 </script>
 @endsection

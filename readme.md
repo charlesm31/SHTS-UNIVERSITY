@@ -19,7 +19,7 @@ See detailed description on the bottom portion of the docs.
 - update mysql credentials to your local mysql credentials: __database name, username, password__
 - __create database shts__, otherwise what you specified on your .env file
 - Open project path on the __terminal__
-- install dependencies: __composer install__
+- install dependencies: __composer install && npm install__ this might take a while take a break and drink coffee :)
 - Generate app key (Optional: only if APP__KEY is not defiend on .env file): __php artisan key:generate__
 - Create database tables: __php artisan migrate__
 - Populate database data: __php artisan db:seed__

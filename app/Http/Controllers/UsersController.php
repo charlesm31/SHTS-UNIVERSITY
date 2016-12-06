@@ -112,14 +112,9 @@ class UsersController extends Controller
     **/
     public function destroyUser(Request $request)
     {
-        if(Auth::user()->type === 'admin'){
-            
-            $id = $request['user_id'];    
-            $user = User::find($id);
-
-            if($id != '1' || $id !='2'){
-                $user->delete();
-            }
+        if(Auth::user()->type === 'admin'){            
+            $id = $request['user_id'];  
+            User::destroy($id);;
         }
         return redirect('/users');     
     }

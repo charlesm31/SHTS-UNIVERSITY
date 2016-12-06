@@ -14,7 +14,7 @@ See detailed description on the bottom portion of the docs.
 
 ## Run SHTS University on your local machine
 - clone project: __git clone https://github.com/charlesm31/SHTS-UNIVERSITY.git__
-- copy .env.example as __.env__
+- copy .env.example as __.env__ to the root directory
 - open __.env file__
 - update mysql credentials to your local mysql credentials: __database name, username, password__
 - __create database shts__, otherwise what you specified on your .env file

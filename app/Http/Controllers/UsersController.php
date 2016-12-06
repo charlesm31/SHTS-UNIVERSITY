@@ -21,8 +21,7 @@ class UsersController extends Controller
 
             if (Auth::attempt(array('username' => $username, 'password' => $password))){
                 return redirect('/users');
-            }
-            else { 
+            }else { 
                 $msg = 'Invalid credentials';
                 $class= 'alert-danger';
                 return view('welcome', compact('msg', 'class', 'username'));
@@ -66,7 +65,7 @@ class UsersController extends Controller
                     'password' => 'required|min:8',
                     'type' => 'required',
                 ]);
-                
+
                 $user = new User;
                 $user->type = $request['type'];
                 $user->username = $request['username'];
@@ -75,11 +74,9 @@ class UsersController extends Controller
                 $user->save();
 
                 return redirect('/users');
-            }     
-
+            }    
             return view('user.form');
-        }           
-
+        }      
         return redirect('/users');
     }
 
@@ -90,11 +87,9 @@ class UsersController extends Controller
     **/
     public function postUser(Request $request, $id)
     {
-
         $user = User::find($id);
 
-        if(Auth::user()->type === 'admin'){            
-            
+        if(Auth::user()->type === 'admin'){   
             if ($request->isMethod('post')) {
 
                 $user->type = $request['type'];
@@ -104,12 +99,9 @@ class UsersController extends Controller
                 }
                 $user->update();
                 return redirect('/users');
-            }       
-
-                       
+            }                              
             return view('user.form', compact('user'));         
         }
-
         return redirect('/users');       
     }
 
@@ -129,7 +121,6 @@ class UsersController extends Controller
                 $user->delete();
             }
         }
-
         return redirect('/users');     
     }
 }

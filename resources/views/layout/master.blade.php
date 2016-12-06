@@ -6,11 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
         <title>@yield('title')</title>
+        @yield('csss')
     </head>
     <body>
         @yield('content')
-
-
+        
         <script src="{{ elixir('js/app.js') }}"></script>
+        @yield('script')
     </body>
 </html>

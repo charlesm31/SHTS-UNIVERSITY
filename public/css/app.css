@@ -8079,6 +8079,12 @@ footer #copyright ul li {
     font-weight: normal;
     padding: 10px 5px;
   }
+  footer .panel .panel-title i.fa {
+    font-size: 42px !important;
+    margin-top: -12px !important;
+    padding-right: 0px !important;
+    color: #524c4c;
+  }
   footer .panel .panel-body {
     padding: 0px 11px;
     background: #F1F1F1;

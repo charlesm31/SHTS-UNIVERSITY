@@ -238,11 +238,11 @@
                 <div class="panel-heading" role="tab" id="headingOne">
                     <h4 class="panel-title">
                         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Lorem
-                        </a>
+                            Lorem <i class="fa fa-angle-down pull-right"></i>
+                        </a>                        
                     </h4>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
                     <ul class="list-group">
                             <li class="list-group-item"><a href="#">Mauris vel imperdiet</a></li>
@@ -262,7 +262,7 @@
                 <div class="panel-heading" role="tab" id="headingTwo">
                     <h4 class="panel-title">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Ipsum
+                            Ipsum <i class="fa fa-angle-down pull-right"></i>
                         </a>
                     </h4>
                 </div>
@@ -285,7 +285,7 @@
                 <div class="panel-heading" role="tab" id="headingThree">
                     <h4 class="panel-title">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Dolor
+                            Dolor <i class="fa fa-angle-down pull-right"></i>
                         </a>
                     </h4>
                 </div>
@@ -311,7 +311,7 @@
                 <div class="panel-heading" role="tab" id="headingThree">
                     <h4 class="panel-title">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Sit Amet
+                            Sit Amet <i class="fa fa-angle-down pull-right"></i>
                         </a>
                     </h4>
                 </div>
@@ -336,7 +336,7 @@
                 <div class="panel-heading" role="tab" id="headingThree">
                     <h4 class="panel-title">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Consectetur
+                            Consectetur <i class="fa fa-angle-down pull-right"></i>
                         </a>
                     </h4>
                 </div>
@@ -370,5 +370,15 @@
         </div> 
     </div>
 </footer>
+@endsection
+
+@section('script')
+<script>
+    $(document).ready(function() {        
+        $('footer a').on('click', function(){
+            $(this).find(".fa").toggleClass("fa-angle-up fa-angle-down");
+        })
+    });
+</script>
 @endsection
 

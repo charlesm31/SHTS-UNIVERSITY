@@ -8,6 +8,21 @@ class BackendController extends Controller
 {
     public function Fibonacci(Request $request)
     {
+         if ($request->isMethod('post')) {
+
+            $count = ($request['number']);
+            $first = 1;
+            $second = 1;
+            $series = array($first, $second);
+
+            for($i=1; $i <= $count-2;  $first=$second, $second=$third, $i++ ) {
+                $third = $first + $second;
+                $series[] =  $third;
+            }
+
+           return view('fibonacci', compact('series'));            
+        }
+
         return view('fibonacci');
     }
 

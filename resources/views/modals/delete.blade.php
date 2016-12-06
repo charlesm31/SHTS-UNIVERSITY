@@ -1,5 +1,5 @@
 <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-sm">
         <div class="modal-content">        
             <div class="modal-header modal-warning">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -7,8 +7,7 @@
             </div>
         
             <div class="modal-body">
-                <h4>Do you really want to delete this record?</h4>
-                <h4>Data wont be retrieved anymore.</h4>
+                <h5>Do you really want to delete this record?</h5>
             </div>
             
             <div class="modal-footer">

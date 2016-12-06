@@ -7781,7 +7781,8 @@ hr {
 }
 
 .full-width {
-  width: 100%;
+  margin-left: 7.5%;
+  width: 85%;
 }
 
 /*==============================================
@@ -7950,12 +7951,16 @@ footer #copyright p {
   margin-bottom: 15px;
 }
 
+footer #copyright ul {
+  padding-left: 0px;
+}
+
 footer #copyright ul li {
   list-style: none;
   display: inline-block;
   border-right: 1px solid #5f5b5b;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 11px;
+  padding-left: 11px;
 }
 
 /*==============================================
@@ -8026,6 +8031,7 @@ footer #copyright ul li {
   section#banner form.login-form {
     padding: 0px;
     padding-top: 15px;
+    padding-bottom: 15px;
     position: relative;
     top: 58px;
   }

@@ -20,7 +20,7 @@ Number Sort
         <h4 class="text-bold">5 Numbers to Sort<h4>
     </div>
 
-    <div class="col-md-2">
+    <div class="col-lg-2 col-md-4">
         <form class="well" id="form_sort" method="post" action="{{ url('/number-sort') }}">
             <div class="form-group">
                
@@ -57,7 +57,7 @@ Number Sort
     </div>    
 
     @if(!empty($numbers))
-    <div class="col-md-2">
+    <div class="col-lg-2 col-md-4">
         <ul class="list-group">   
             <li class="list-group-item active text-center text-bold">Ascending Order</li>       
             <span style="display: none">{{ sort($numbers) }}</span>
@@ -67,7 +67,7 @@ Number Sort
         </ul>
     </div>
 
-    <div class="col-md-2">
+    <div class="col-lg-2 col-md-4">
         <ul class="list-group">   
             <li class="list-group-item active text-center text-bold">Descending Order</li>       
             <span style="display: none">{{ rsort($numbers) }}</span>

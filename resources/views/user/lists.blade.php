@@ -14,7 +14,7 @@ User Lists
 
 @section('content')
 <p>List of all users from the database </p>
-<table class="table table-resposive table-hover">
+<table class="table table-resposive table-hover" id="tbl_users">
     <thead>
       <tr>
         <th>User</th>
@@ -51,6 +51,8 @@ User Lists
 @section('script')
 <script>
   $(document).on("click", ".delete_user", function () {
+      $("#tbl_users").DataTables();
+
       var user_id = $(this).data('id');
       $("#confirm-delete #user_id").val( user_id );
   });

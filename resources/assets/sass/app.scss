@@ -15,7 +15,6 @@
 // Icons
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
-
 /*==============================================
    Normalization
 ==============================================*/
@@ -107,7 +106,8 @@ hr{
 }
 
 .full-width{
-    width: 100%
+    margin-left: 7.5%;
+    width: 85%;
 }
 
 /*==============================================
@@ -274,12 +274,17 @@ footer{
             margin-bottom: 15px;
         }
 
-        ul li{
-            list-style: none;
-            display: inline-block;
-            border-right: 1px solid #5f5b5b;
-            padding-right: 15px;
-            padding-left: 15px;
+        ul {
+            padding-left: 0px;
+
+            li{
+                list-style: none;
+                display: inline-block;
+                border-right: 1px solid #5f5b5b;
+                padding-right: 11px;
+                padding-left: 11px;
+            }
+            
         }
     }
 }

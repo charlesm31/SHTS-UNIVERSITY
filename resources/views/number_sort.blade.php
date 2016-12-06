@@ -16,28 +16,7 @@ Number Sort
 <p>A form that accepts 5 numeric input, once submitted, the inputted numbers will be displayed in an ascending and descending order.</p>
 
 <div class="row">
-    <hr>
     <div class="col-md-12">
-        <h4 class="text-bold">Activity parameters/requirements:</h4>
-        <ul>
-            <li>
-                <p>On another PHP page, have a form that has two text field where the user will place his/her inputs for testing. Once the form is submitted, </p>
-            </li>
-            <li>
-                <p>a result will display on the page that returns true if two words are each other's anagrams; false otherwise.</p>
-            </li>
-        </ul>
-
-        <hr>
-
-        <h4 class="text-bold">Expected Output:</h4>  
-        <ul>
-            <li>
-                <p>For example, AreAnagrams::areStringsAnagrams('momdad', 'dadmom') should return true as arguments are anagrams.</p>
-            </li>            
-        </ul>      
-        <hr>
-
         <h4 class="text-bold">5 Numbers to Sort<h4>
     </div>
 

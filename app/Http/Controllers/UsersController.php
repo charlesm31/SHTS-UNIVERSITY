@@ -41,18 +41,21 @@ class UsersController extends Controller
 
     public function storeUser(Request $request)
     {
+        if(Auth::user()->type === 'admin'){
+            if ($request->isMethod('post')) {
+                $user = new User;
+                $user->type = $request['type'];
+                $user->username = $request['username'];
+                $user->password = bcrypt($request['password']);
+                $user->save();
 
-        if ($request->isMethod('post')) {
-            $user = new User;
-            $user->type = $request['type'];
-            $user->username = $request['username'];
-            $user->password = bcrypt($request['password']);
-            $user->save();
+                return redirect('/users');
+            }     
 
-            return redirect('/users');
-        }        
+            return view('user.form');
+        }           
 
-        return view('user.form');
+        return redirect('/users');
     }
 
     public function postUser(Request $request, $id)

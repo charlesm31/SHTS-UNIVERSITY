@@ -80,15 +80,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <!-- The user image in the navbar-->
                   <img src="/img/default.png" class="user-image" alt="User Image"/>
                   <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                  <span class="hidden-xs">Alexander Pierce</span>
+                  <span class="hidden-xs">{{ (Auth::check() ? Auth::user()->username : 'Username') }}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- The user image in the menu -->
                   <li class="user-header">
                     <img src="/img/default.png" class="img-circle" alt="User Image" />
                     <p>
-                      Alexander Pierce - Web Developer
-                      <small>Member since Nov. 2012</small>
+                      {{ (Auth::check() ? Auth::user()->username : 'Username') }} - {{ (Auth::check() ? Auth::user()->type : 'Type') }}
+                      <small>Member since {{ (Auth::check() ? Auth::user()->created_at : '') }}</small>
                     </p>
                   </li>                  
                   <!-- Menu Footer-->
@@ -116,7 +116,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <img src="/img/default.png" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
-              <p>Alexander Pierce</p>
+              <p>{{ (Auth::check() ? Auth::user()->username : 'Username') }}</p>
               <!-- Status -->
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
@@ -126,11 +126,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <ul class="sidebar-menu">
             <li class="header">FEATURES</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="{{ url('/users') }}"><i class='fa fa-users'></i> <span>Users</span></a></li>
-            <li class="active"><a href="{{ url('/fibonacci') }}"><i class='fa fa-calculator'></i> <span>Fibonacci</span></a></li>
-            <li class="active"><a href="{{ url('/palindrome') }}"><i class='fa fa-backward'></i> <span>Palindrome</span></a></li>
-            <li class="active"><a href="{{ url('/anagram') }}"><i class='fa fa-random'></i> <span>Anagram</span></a></li>
-            <li class="active"><a href="{{ url('/number-sort') }}"><i class='fa fa-sort'></i> <span>Number Sort</span></a></li>           
+            <li class=""><a href="{{ url('/users') }}"><i class='fa fa-users'></i> <span>Users</span></a></li>
+            <li class=""><a href="{{ url('/fibonacci') }}"><i class='fa fa-calculator'></i> <span>Fibonacci</span></a></li>
+            <li class=""><a href="{{ url('/palindrome') }}"><i class='fa fa-backward'></i> <span>Palindrome</span></a></li>
+            <li class=""><a href="{{ url('/anagram') }}"><i class='fa fa-random'></i> <span>Anagram</span></a></li>
+            <li class=""><a href="{{ url('/number-sort') }}"><i class='fa fa-sort'></i> <span>Number Sort</span></a></li>           
           </ul><!-- /.sidebar-menu -->
         </section>
         <!-- /.sidebar -->

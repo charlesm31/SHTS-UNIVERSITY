@@ -21,7 +21,9 @@ User Lists
         <th>Type</th>
         <th>Status</th>
         <th>Created</th>
+        @if(Auth::user()->type === 'admin')
         <th><a href="{{ url('/user/new') }}"><i class="fa fa-plus"></i> New</a></th>
+        @endif
       </tr>
     </thead>
     <tbody>
@@ -32,10 +34,12 @@ User Lists
         <td>{{ $user->type }}</td>
         <td><span class="label label-success">Active</span></td>
         <td>{{ $user->created_at }}</td>
+        @if(Auth::user()->type === 'admin')
         <td>
           <a href="{{ url('/user/update')}}/{{ $user->id }}" class="btn btn-xs btn-primary" id="{{ $user->id }}"><i class="fa fa-pencil"></i> </a>
           <button class="btn btn-xs btn-danger delete_user"  data-id="{{ $user->id }}" data-toggle="modal"  data-target="#confirm-delete"><i class="fa fa-trash-o"></i> </button>
         </td>
+        @endif
       </tr>
       @endforeach
     </tbody>

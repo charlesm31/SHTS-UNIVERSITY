@@ -20,7 +20,10 @@ Route::get('/login', function () {
 });
 
 // private routes
-// Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth']], function () {
+
+     Route::post('/user/login', 'UsersController@postUser');
+     Route::post('/user/logout', 'UsersController@postUser');
 
      Route::get('/users', 'UsersController@getUsers');
      Route::get('/user/new', 'UsersController@storeUser');
@@ -31,4 +34,4 @@ Route::get('/login', function () {
      Route::match(['get', 'post'], '/palindrome','BackendController@Palindrome');
      Route::match(['get', 'post'], '/anagram','BackendController@Anagram');
      Route::match(['get', 'post'], '/number-sort','BackendController@NumberSort');    
-// });
+});

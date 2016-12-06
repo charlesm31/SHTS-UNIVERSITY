@@ -65,7 +65,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-offset-7 col-md-4">
-                <form class="login-form animated fadeIn">
+                <form class="login-form animated fadeIn" method="post" action="">
                     <h1>Student Login</h1>
 
                     <div class="form-group">
